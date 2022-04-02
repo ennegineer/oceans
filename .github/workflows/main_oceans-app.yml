@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - oceans
+name: Build and deploy Python app to Azure Web App - oceans-app
 
 on:
   push:
@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'oceans-app'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_054332CB92324653BFE7E373B94A9335 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7CA8B308A185400386791D9CFF7F1322 }}
