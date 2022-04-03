@@ -66,7 +66,7 @@ var myMap = L.map("map", {
   }).addTo(myMap);
 
   d3.json("data/trawlers/trawler_1.json").then(function (response) {
-    console.log(response);
+    // console.log(response);
   
     // Create a new marker cluster group.
     var markers = L.markerClusterGroup();

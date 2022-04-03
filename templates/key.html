@@ -48,7 +48,7 @@
 <div class="row">
   <div class="col-md-12 jumbotron text-center">
     <h1>Human Impact on Oceans Dashboard</h1>
-    <p>Navigate the maps below to explore the dataset</p>
+    <p>Glossary of terms found throughout our data</p>
   </div>
 </div>
 
@@ -67,7 +67,7 @@
             Background
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/key">Key</a></li>
+            <li><a class="dropdown-item active" href="#">Key</a></li>
             <li><a class="dropdown-item" href="humidity.html">The Process</a></li>
             <li><a class="dropdown-item" href="winds.html">Data Sources</a></li>
           </ul>
@@ -91,32 +91,34 @@
 </nav>
 
 
-<div class="row">
-  <div class = "col-md-3">
-    <p style = "text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Quaerat, ut. Tempore libero dolor deserunt omnis ipsum corrupti nisi quod nihil corporis iure, 
-      accusantium porro quam maxime culpa eos. Adipisci, alias.</p>
-  </div>
-  <div class = "col-md-6 justify-content-center">
-    <p style = "text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Quaerat, ut. Tempore libero dolor deserunt omnis ipsum corrupti nisi quod nihil corporis iure, 
-      accusantium porro quam maxime culpa eos. Adipisci, alias.</p>
-  </div>
-  <div class = "col-md-3">
-    <p style = "text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Quaerat, ut. Tempore libero dolor deserunt omnis ipsum corrupti nisi quod nihil corporis iure, 
-      accusantium porro quam maxime culpa eos. Adipisci, alias.</p>
-  </div>
-</div>
 <div class="row" id="map-holder">
   <!-- The div where we'll insert our map -->
-  <div id="map" class="col-md-6"></div>
-  <div class="col-md-5" id="data"></div>
+  <div class="col-md-6 defs">
+      <h3>Map Explanations</h3>
+      <p>
+      <b>Eutrophication Map</b>: This is a map showing eutrophication in our oceans. Eutrophication is frequently caused by runoff from the land, and causes death of animal life from lack of oxygen.<br />
+      <b>Eutrophic</b>: A body of water rich in nutrients, supporting dense plant population. <br />
+      <b>Hypoxic</b>: Water that is hypoxic is low in oxygen, with dissolved oxygen concentrations of less than 2-3 mg/L.<br />
+      <b>Zones/Area Codes</b><br />
+      <b>FAO Fishing Areas</b>: FAO is an acronym for the Fish and Agriculture Organization. This organization has defined the fishing zones.<br />
+    </p>
+
+  </div>
+  <div class="col-md-5 defs">
+      <h3>Boating/Fishing Terms</h3>
+      <p>
+        <b>Trawler</b>: Commercial fishing boats which drag nets through the water to trap fish. This fishing method often leads to catching and killing ocean life not meant to be fished.<br />
+        <b>Troller</b><br />
+        <b>Pole and Line</b>: Boats where fishermen are using traditional pole and line fishing techniques.<br />
+        <b>Purse Seine</b><br />
+        <b>Drifting Long Lines</b> <br />
+        </p>
+  </div>
 </div>
 
 
 <!-- JavaScript file -->
-<script type="text/javascript" src="static/js/logic.js"></script>
+<!-- <script type="text/javascript" src="static/js/logic.js"></script> -->
 </body>
 
 </html>
