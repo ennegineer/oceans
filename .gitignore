@@ -6,6 +6,11 @@ __pycache__/
 # C extensions
 *.so
 
+# Enne added
+config.py
+.ipnyb_checkpoints/
+.azure/
+
 # Distribution / packaging
 .Python
 build/
