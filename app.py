@@ -1,5 +1,6 @@
 # import dependencies
 from flask import Flask, jsonify, render_template
+from sqlalchemy import create_engine
 import pymongo
 #################################################
 # Database Setup
@@ -37,14 +38,41 @@ def key():
     print("Loading Key...")
     return render_template('key.html')
 
-# # Trawler route
-# @app.route("/<int:mmsi>")
-# def trawlersroute(mmsi):
-#     print("Server received request for trawlers...")
-#     # write a statement that finds all the items in the db and sets it to a variable
-#     mmsi_entry = list(trawlers.find({"mmsi": mmsi}))
-#     return mmsi_entry
+# 'sources' route
+@app.route("/sources")
+def sources():
+    print("Loading Sources...")
+    return render_template('sources.html')
+    
+# 'data' route
+@app.route("/data")
+def data():
+    print("Loading Data...")
+    return render_template('data.html')
 
+# 'data' route
+@app.route("/process")
+def process():
+    print("Loading Process...")
+    return render_template('process.html')
+
+# Trawler route
+@app.route("/api/trawler/<int:mmsi>")
+def trawlersroute(mmsi):
+    print("Server received request for trawlers...")
+    # write a statement that finds all the items in the db and sets it to a variable
+    mmsi_entry = jsonify({'trawlers': list(mmsi)})
+    # list(trawlers.find({"mmsi": mmsi}))
+    return mmsi_entry
+
+# Trawler route
+@app.route("/api/trawlers")
+def alltrawlers():
+    print("Server received request for trawlers...")
+    # write a statement that finds all the items in the db and sets it to a variable
+    all_trawlers = jsonify({'trawlers': list(all)})
+    # list(trawlers.find())
+    return all_trawlers
 
 
 if __name__ == "__main__":

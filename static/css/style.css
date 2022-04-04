@@ -57,6 +57,9 @@ html, body
 .group a:hover {
   color: rgb(97, 209, 253);
 }
+.nav-link active {
+  color: rgb(97, 209, 253);
+}
 .dropdown-item.active, .dropdown-item:active {
   color: #fff;
   text-decoration: none;
@@ -67,11 +70,11 @@ html, body
   color:rgb(0, 0, 0);
 }
 
-/* .nav-link {
+.navbar-light .navbar-nav .nav-link {
   color:rgb(0, 0, 0);
-} */
+}
 
-.nav-link:hover{
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
   color: rgba(107, 107, 107, 0.55);
 }
 
@@ -81,9 +84,15 @@ html, body
 }
 
 .navbar-brand {
-  /* background-color: #fa8072; */
   color:rgb(97, 209, 253);
   padding: 10px;
   /* font-family: 'Rajdhani', sans-serif; */
   font-weight: 400;
+}
+
+a:hover {
+  color: rgb(97, 209, 253);
+}
+a {
+  color: rgb(18, 183, 248);
 }

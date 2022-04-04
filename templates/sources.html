@@ -48,14 +48,14 @@
 <div class="row">
   <div class="col-md-12 jumbotron text-center">
     <h1>Human Impact on Oceans Dashboard</h1>
-    <p>Navigate the maps below to explore the dataset</p>
+    <p>Where we sourced our data</p>
   </div>
 </div>
 
 <!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: 0px">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Our Oceans</a>
+    <a class="navbar-brand" href="/">Our Oceans</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -69,7 +69,7 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="/key">Key</a></li>
             <li><a class="dropdown-item" href="/process">The Process</a></li>
-            <li><a class="dropdown-item" href="/sources">Data Sources</a></li>
+            <li><a class="dropdown-item active" href="#">Data Sources</a></li>
           </ul>
         </li>
         <li class="nav-item">
@@ -91,29 +91,32 @@
 </nav>
 
 
-<div class="row">
-  <div class = "col-md-3">
-    <p style = "text-align: center;">Toggle the settings on the map below to explore our oceans. See the ocean currents, temperature, and eutrophication. Do you see any patterns? </p>
-  </div>
-  <div class = "col-md-6 justify-content-center">
-    <p style = "text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Quaerat, ut. Tempore libero dolor deserunt omnis ipsum corrupti nisi quod nihil corporis iure, 
-      accusantium porro quam maxime culpa eos. Adipisci, alias.</p>
-  </div>
-  <div class = "col-md-2">
-    <p style = "text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Quaerat, ut. </p>
-  </div>
-</div>
 <div class="row" id="map-holder">
   <!-- The div where we'll insert our map -->
-  <div id="map" class="col-md-6"></div>
-  <div class="col-md-5" id="data"></div>
+  <div class="col-md-6 defs">
+      <h3>Data</h3>
+      <h5>The datasets in this project are from the following sources:</h5><br/>
+      <p>
+      <b><a href="https://globalfishingwatch.org/" target="_blank">https://globalfishingwatch.org/</a></b>&nbsp;&nbsp;&nbsp; This source provided the data we used on fishing vessels. GFW combines publicly available tracking data with data acquired through ship monitorying systems operated by governments and made available through partnerships they've secured. <br />
+      <b><a href="https://www.fao.org/about/en/" target="_blank">https://www.fao.org/about/en/</a></b>&nbsp;&nbsp;&nbsp; The Food and Agriculture Organization is a specialized agency of the UN, leading international efforts to achieve food security.<br />
+      <b><a href="https://www.wri.org/" target="_blank">https://www.wri.org/</a></b>&nbsp;&nbsp;&nbsp; World Resources Institute is a global research organization focused around global challenges such as food, water, energy, climate and ocean.<br />
+
+    </p>
+
+  </div>
+  <div class="col-md-5 defs">
+      <h3>Other Information</h3>
+      <h5>Websites with relevant information:</h5><br/>
+      <p>
+        <b><a href="https://www.naturalworldfacts.com/" target="_blank">https://www.naturalworldfacts.com/</a></b>&nbsp;&nbsp;&nbsp; A community developed by/for people passionate about nature. <br />
+        <b> </b><br />
+        </p>
+  </div>
 </div>
 
 
 <!-- JavaScript file -->
-<script type="text/javascript" src="static/js/logic.js"></script>
+<!-- <script type="text/javascript" src="static/js/logic.js"></script> -->
 </body>
 
 </html>

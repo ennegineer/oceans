@@ -48,14 +48,14 @@
 <div class="row">
   <div class="col-md-12 jumbotron text-center">
     <h1>Human Impact on Oceans Dashboard</h1>
-    <p>Navigate the maps below to explore the dataset</p>
+    <p>See the data for yourself</p>
   </div>
 </div>
 
 <!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: 0px">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Our Oceans</a>
+    <a class="navbar-brand" href="/">Our Oceans</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -63,7 +63,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Background
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -76,7 +76,7 @@
           <a class="nav-link" href="/analysis">Analysis</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/data">Data</a>
+          <a class="nav-link active" href="#">Data</a>
         </li>
       </ul>
     </div>
@@ -92,28 +92,25 @@
 
 
 <div class="row">
-  <div class = "col-md-3">
-    <p style = "text-align: center;">Toggle the settings on the map below to explore our oceans. See the ocean currents, temperature, and eutrophication. Do you see any patterns? </p>
-  </div>
-  <div class = "col-md-6 justify-content-center">
-    <p style = "text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Quaerat, ut. Tempore libero dolor deserunt omnis ipsum corrupti nisi quod nihil corporis iure, 
-      accusantium porro quam maxime culpa eos. Adipisci, alias.</p>
-  </div>
-  <div class = "col-md-2">
-    <p style = "text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Quaerat, ut. </p>
-  </div>
-</div>
-<div class="row" id="map-holder">
+    <div class="col-md-2 ">
+    </div>
   <!-- The div where we'll insert our map -->
-  <div id="map" class="col-md-6"></div>
-  <div class="col-md-5" id="data"></div>
+  <div class="col-md-6 apis">
+      <h3>Our APIs</h3>
+      <h5>Use the links below to access our data through API.</h5><br/>
+      <p>
+      <b><a href="/api/trawlers">/api/trawlers</a></b>&nbsp;&nbsp;&nbsp; Data for all tralwers<br />
+      <b><a href="/api/trawler/1252339803566">/api/trawler/&lt;mmsi&gt;</a></b>&nbsp;&nbsp;&nbsp; All datapoints for specified trawler by MMSI. Clicking this link will point you to mmsi 1252339803566 as an example.<br /><br />
+    </p>
+
+  </div>
+  <div class="col-md-2 ">
+  </div>
 </div>
 
 
 <!-- JavaScript file -->
-<script type="text/javascript" src="static/js/logic.js"></script>
+<!-- <script type="text/javascript" src="static/js/logic.js"></script> -->
 </body>
 
 </html>
