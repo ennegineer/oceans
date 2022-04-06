@@ -107,32 +107,90 @@
 
   <div class="row">
     <div class = "col-md-3">
-      <p style = "text-align: center;">Toggle the settings on the map below to explore our oceans. See the ocean currents, temperature, and eutrophication. Do you see any patterns? </p>
+      <p style = "text-align: center;">Click on elements in the map to see popup information!</p>
     </div>
-    <div class = "col-md-6 justify-content-center">
-      <p style = "text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Quaerat, ut. Tempore libero dolor deserunt omnis ipsum corrupti nisi quod nihil corporis iure, 
-        accusantium porro quam maxime culpa eos. Adipisci, alias.</p>
+    <div class = "col-md-7 justify-content-center">
+      <p style = "text-align: center;">Toggle the settings on the map and chart below to explore ocean zones and commercial fishing vessels by country and year.</p>
     </div>
-    <div class = "col-md-2">
-      <p style = "text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Quaerat, ut. </p>
+    <div class = "col-md-1">
+      <p style = "text-align: center;"></p>
     </div>
   </div>
   <div class="row" id="map-holder">
     <!-- The div where we'll insert our map -->
     <div id="map" class="col-md-6"></div>
-    <div class="col-md-5" id="data"></div>
+    <div class="col-md-5" id="data">
+        <div class="col-md-4">
+            <div class="well">
+              <h5>Select a country:</h5>
+              <select id="selDataset" onchange="optionChanged(this.value)"></select>
+            </div>
+          </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div id="myGraph"></div>
+          </div>
+        </div>
+        <div class="col-md-3">
+            <div class="yr">
+                <h5>Select a year:</h5>
+                <select id="selYear" onchange="yearChanged(this.value)"></select>
+              </div>
+        </div>
+        <div class="row">
+            
+                <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title" id="title1"></h5>
+                      <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+                      <p class="card-text" id="v1"></p>
+                    </div>
+                  </div>
+                
+                
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title" id="title2"></h5>
+                      <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+                      <p class="card-text" id="v2"></p>
+                    </div>
+                  </div>
+                
+                
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title" id="title3"></h5>
+                      <!-- <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6> -->
+                      <p class="card-text" id="v3"></p>
+                    </div>
+                  </div>
+                
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title" id="title4"></h5>
+                      <p class="card-text" id="v4"></p>
+                    </div>
+                  </div>
+                
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title" id="title5"></h5>
+                      <p class="card-text" id="v5"></p>
+                    </div>
+                  </div>
+                
+            </div>
+          </div>
+    </div>
   </div>
 
 
-
-
-  <!-- The div where we'll insert our map -->
-  <!-- <div id="map" style = "width: 50%; height: 80%;"></div> -->
   <!-- JavaScript file -->
   <script type="text/javascript" src="static/js/fishandboats.js"></script>
-  
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   
 </body>
 </html>
+
+
+
