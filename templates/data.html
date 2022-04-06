@@ -72,9 +72,15 @@
             <li><a class="dropdown-item" href="/sources">Data Sources</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/analysis">Analysis</a>
-        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Analysis
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="/direct">Fishing and Fish Population</a></li>
+              <li><a class="dropdown-item" href="/indirect">Indirect Effects of Human Activity</a></li>
+            </ul>
+          </li>
         <li class="nav-item">
           <a class="nav-link active" href="#">Data</a>
         </li>
@@ -99,8 +105,21 @@
       <h3>Our APIs</h3>
       <h5>Use the links below to access our data through API.</h5><br/>
       <p>
-      <b><a href="/api/trawlers">/api/trawlers</a></b>&nbsp;&nbsp;&nbsp; Data for all tralwers<br />
-      <b><a href="/api/trawler/1252339803566">/api/trawler/&lt;mmsi&gt;</a></b>&nbsp;&nbsp;&nbsp; All datapoints for specified trawler by MMSI. Clicking this link will point you to mmsi 1252339803566 as an example.<br /><br />
+      <b><a href="/api/trawlers">/api/trawlers</a></b>&nbsp;&nbsp;&nbsp; Data for all trawlers<br /><br />
+      <b><a href="/api/trawler/1252339803566">/api/trawler/&lt;MMSI&gt;</a></b>&nbsp;&nbsp;&nbsp; All datapoints for specified trawler by MMSI. Clicking this link will point you to MMSI 1252339803566 as an example.<br /><br />
+      <b><a href="/api/marinedebris">/api/marinedebris</a></b>&nbsp;&nbsp;&nbsp; Data for all marine debris<br /><br />
+      <b><a href="/api/marinedebris/METAL">/api/marinedebris/&lt;material&gt;</a></b>&nbsp;&nbsp;&nbsp; All datapoints for specified marine debris by material. Clicking this link will point you to METAL as an example. Full list of materials available (case sensitive): 
+      <ul>
+          <li>PLASTIC</li>
+          <li>METAL</li>
+          <li>PAPER & LUMBER</li>
+          <li>GLASS</li>
+          <li>BOAT PARTS</li>
+          <li>CLOTH</li>
+          <li>RUBBER</li>
+          <li>FISHING GEAR</li>
+          <li>OTHER ITEMS</li>
+      </ul><br /><br />
     </p>
 
   </div>

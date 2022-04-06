@@ -96,3 +96,27 @@ a:hover {
 a {
   color: rgb(18, 183, 248);
 }
+
+.legend {
+  line-height: 10px;
+  color: black;
+  font-size: px;
+  background-color: white;
+  padding: 15px;
+}
+
+.legend i {
+  width: 8px;
+  height: 8px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
+}
+
+.quotes {
+  font-size: 3rem;
+  line-height: 2.8rem;
+}
+.quotes a {
+  font-size: 2rem;
+}
