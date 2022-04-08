@@ -588,7 +588,7 @@ function yearChanged(selectedYear) {
   for (let i = 0; i < summarydata.length; i++) {
     row = summarydata[i];
     // Compare value to selected argument
-    if (row.Year === selectedYear) {
+    if (row.Year === Number(selectedYear)) {
       vtype.push(row['Vessel Type']);
       numvessels.push(row['Num of Vessels']);
       datapoints.push(row['Data Points']);

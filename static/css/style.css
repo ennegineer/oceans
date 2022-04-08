@@ -114,8 +114,8 @@ a {
 }
 
 .quotes {
-  font-size: 2.7rem;
-  line-height: 2.6rem;
+  font-size: 2.5rem;
+  line-height: 2.4rem;
 }
 .quotes a {
   font-size: 2rem;
@@ -127,8 +127,8 @@ a {
 .card h5 {
   color:rgb(41, 41, 41);
 }
-.card p {
-  vertical-align: bottom;
-  position: absolute;
-  bottom: 0;
+.card-body {
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
 }

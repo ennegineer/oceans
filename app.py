@@ -84,13 +84,49 @@ def trawlersroute(mmsi):
 @app.route("/api/trawlers")
 def alltrawlers():
     print("Server received request for trawlers...")
-    print(mongo.db)
     try:
         # Find one record of data from the mongo database
-        print(mongo.db)
         trawlers = mongo.db.trawlers.find({},{"_id": 0})
-        print(trawlers[0])
         return jsonify(list(trawlers)).data
+    except Exception as e:
+        print(e)
+        return redirect("/data", code=302)
+
+# Specific PS route
+@app.route("/api/purse_seine/<int:mmsi>")
+def psroute(mmsi):
+    print("Server received request for trawlers...")
+    try:
+        # Find one record of data from the mongo database
+        print(mmsi)
+        mmsi_entry = mongo.db.purse_seines.find({"mmsi": mmsi}, {"_id": 0})
+        
+        # print(jsonify(list(mmsi_entry)))
+        return jsonify(list(mmsi_entry)).data
+    except Exception as e:
+        print(e)
+        return redirect("/data", code=302)
+    
+# PS route
+@app.route("/api/purse_seines")
+def allps():
+    print("Server received request for trawlers...")
+    try:
+        # Find one record of data from the mongo database
+        ps = mongo.db.purse_seines.find({},{"_id": 0})
+        return jsonify(list(ps)).data
+    except Exception as e:
+        print(e)
+        return redirect("/data", code=302)
+
+# Trawler route
+@app.route("/api/trollers")
+def alltrollers():
+    print("Server received request for trollers...")
+    try:
+        # Find one record of data from the mongo database
+        trollers = mongo.db.trollers.find({},{"_id": 0})
+        return jsonify(list(trollers)).data
     except Exception as e:
         print(e)
         return redirect("/data", code=302)
@@ -102,7 +138,6 @@ def marinedebris():
     try:
         # Find one record of data from the mongo database
         debris = mongo.db.debris.find({},{"_id": 0, "master_item_id": 0})
-        print(debris[0])
         return jsonify(list(debris)).data
     except Exception as e:
         print(e)
