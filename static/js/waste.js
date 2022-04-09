@@ -106,13 +106,12 @@ d3.json("static/data/wri_eutrophic_hypoxic_2011.json").then(function (data) {
 //lat = 5, long = 6. refers to what was found by a variety of clean up charities around the world
 d3.json("static/data/marine_debris_results_location_not_dropped.json").then(function (data) {
   var info = data.data;
-  //console.log(info)
   //var pointArray = [];
   var customMarker = L.ExtraMarkers.icon({
-    shape: 'circle',
-    markerColor: 'yellow',
+    shape: 'square',
+    markerColor: 'orange',
     prefix: 'fa',
-    icon: 'ion-android-warning',
+    icon: 'ion-nuclear',
     iconColor: '#fff',
     iconRotate: 0,
     extraClasses: '',
@@ -123,8 +122,8 @@ d3.json("static/data/marine_debris_results_location_not_dropped.json").then(func
   //set up the marker cluster
   var markers = L.markerClusterGroup({
     iconCreateFunction: function (cluster) {
-      var markers = cluster.getAllChildMarkers();
-      var text = String(markers.length)
+      var clusterMarkers = cluster.getAllChildMarkers();
+      var text = String(clusterMarkers.length)
       //var html = '<div class="circle">' + markers.length + '</div>';
       //L.divIcon({ html: html, className: 'mycluster', iconSize: L.point(32, 32) });
       return L.ExtraMarkers.icon({
@@ -141,19 +140,19 @@ d3.json("static/data/marine_debris_results_location_not_dropped.json").then(func
     }, spiderfyOnMaxZoom: true, showCoverageOnHover: true, zoomToBoundsOnClick: true 
   },
 );
-//info[i][2] is the category
 //set up for the individual markers
-  for (i = 0; i < info.length; i++) {
-    var name = info[i][1]
-    var cat = info[i][2]
-    var lat = info[i][5]
-    var lng = info[i][6]
-    var coord = [lat, lng]
-    
-    markers.addLayer(L.marker(coord), {icon : customMarker}).bindPopup("Item Found: " + name +"<hr>Category: "+ cat);
-  
-  }
-  markers.addTo(trash_markers)
+for (i = 0; i < info.length; i++) {
+  var name = info[i][1]
+  var cat = info[i][2]
+  var quantity = info[i][4]
+  var lat = info[i][5]
+  var lng = info[i][6]
+  var coord = [lat, lng]
+  var newMarker = new L.marker(coord, {icon : customMarker})
+    .bindPopup("Category: " + cat + "<hr>Item Found: " + name +"<br>Quantity: " + quantity)
+  markers.addLayer(newMarker);
+}
+markers.addTo(trash_markers)
 })
 
 d3.json("static/data/Major_Ocean_Currents.geojson").then(function (data) {

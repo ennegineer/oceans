@@ -102,12 +102,11 @@
   <div class="col-md-6 defs">
       <h3>The Concept</h3>
       <p>
-      We wanted to explore any data we could find on our oceans. As we began our search for data, we realized that there is <em>so much </em>out there! We had to hone in on more specific topics to look for data efficiently. <br/><br/>We decided to focus on the human impact on our oceans - or more specifically, eutrophication in coastal regions due to agricultural runoff, and how commercial fishing might be affecting fish populations and trash accumulation in the oceans. <br />
+      We wanted to explore any data we could find on our oceans. As we began our search for data, we realized that there is <em>so much </em>out there! We had to hone in on more specific topics to look for data efficiently. <br/><br/>We decided to focus on the human impact on our oceans - or more specifically, eutrophication in coastal regions due to agricultural runoff, and how commercial fishing might be affecting fish populations and trash accumulation in the oceans. <br /><br />
     </p>
 
     <h3>Sourcing and Transforming Data</h3>
     <p>
-    We did this with the fish data. <br /><br />
     Commercial fishing vessel data was found via <a href="https://globalfishingwatch.org/" target="_blank">Global Fishing Watch</a>, a site with a purpose to create and publicly share data about human activity at sea. We created a Python script using Pandas to remove unnecessary columns of data, duplicated entries and false positives, then create separate .json files for the types of vessels and each one within the types. 
     <br /><br />Marine debris data was found through Debristracker, a site whose main mission is to track marine debris which helps to collect and build a large dataset that assists researchers to help tackle the plastic-pollution problem.  We gathered data from 2012 to 2022 from all organizations that inputted data into the database , which generated more than 1.3 million data points across 4 different .csv files (2012-2014, 2015-17, 2018-2020, and 2021-2022) that had to be filtered, cleaned, and then merged. We used python code utilizing pandas to remove any unnecessary columns of the data, assign appropriate data types, remove values that were duplicated and of null values, and stripped the space on the data appropriately. We lastly created a .json file showing the cleaned data to be used for the creation  of other visuals. <br />
   </p>
@@ -117,8 +116,7 @@
     <p>
         We leveraged the flexibility of Leaflet.js to add in plugins to modify markers and cluster data on CartoB's map.  With large datasets with many individual points, we used Turf.js, a secondary library for advanced geospatial analysis to algorithmically clean and smooth the data into cleaner lines. Colors schemes were created using ColorBrewer which is a swatch site specialized for maps and modified for personal use.
         <br /><br />
-        We created the material and quantity time series visual utilizing the plotly.express module with the cleaned marine debris data and taking a sum of the data grouped by the material and quantity sorted by the year in ascending order. The material and radius time series visual was made using the same plotly.express module with the cleaned marine debris data and taking a sum of the radius data grouped by material only and then sorted by the year in ascending order.<br/><br/>
-        We created the geographic scatterplot of the item names and their quantities by using plotly.express module using the cleaned marine debris data utilizing the latitude and longitude values provided with the dataset and sorting by the year in ascending order. The geographic scatterplot of the debris materials and their radius was made using plotly.express and the cleaned marine debris data utilizing the latitude and longitude values provided with the dataset and sorting by the year in ascending order.<br />
+        We created the material and quantity time series visual utilizing the plotly.express module with the cleaned marine debris data and taking a sum of the data grouped by the material and quantity sorted by the year in ascending order. The material and radius time series visual was made using the same plotly.express module with the cleaned marine debris data and taking a sum of the radius data grouped by material only and then sorted by the year in ascending order.<br/><br/><br />
   </p>
 
       <h3>Creating the Website</h3>
