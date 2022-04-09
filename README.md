@@ -5,10 +5,10 @@ In this project we have analyzed and compared data from multiple sources to look
 ## Visualizations
 
 A screenshot of the fishing analysis page:
-![fishing analysis] (/screenshot-fishing.JPG)
+![fishing analysis](screenshot-fishing.JPG)
 
 A screenshot of the eutrophication and marine debris analysis page:
-![eutrophication analysis] (/screenshot-eutrophication.JPG)
+![eutrophication analysis](screenshot-eutrophication.JPG)
 
 ## Caveat
 
